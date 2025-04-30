@@ -2,25 +2,27 @@ import { NavLink } from "react-router-dom";
 import { Tabs, Tab, Box } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface TabPage {
     path: string;
     label: string;
 }
 
-const tabs: TabPage[] = [
-    { path: '/', label: 'Inicio' },
-    { path: '/projects', label: 'Proyectos' },
-    { path: '/consulting', label: 'Consultoría' },
-    { path: '/contact', label: 'Contáctame' },
-    { path: '/about', label: 'Acerca de' },
-];
-
 export function TabMenu() {
+    const { t } = useTranslation();
 
     const location = useLocation();
     const navigate = useNavigate();
     const [value, setValue] = useState(0);
+
+    const tabs: TabPage[] = [
+        { path: '/', label: t('tabmenu.home') },
+        { path: '/projects', label: t('tabmenu.projects') },
+        { path: '/consulting', label: t('tabmenu.consulting') },
+        { path: '/contact', label: t('tabmenu.contact') },
+        { path: '/about', label: t('tabmenu.about') },
+    ];
 
     useEffect(() => {
         const currentTab = tabs.findIndex(tab => tab.path === location.pathname);

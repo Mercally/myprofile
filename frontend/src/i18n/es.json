@@ -1,0 +1,9 @@
+{
+    "tabmenu": {
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "consulting": "Consultoría",
+        "contact": "Contáctame",
+        "about": "Acerca"
+    }
+}

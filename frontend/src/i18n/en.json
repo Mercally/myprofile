@@ -1,0 +1,9 @@
+{
+    "tabmenu": {
+        "home": "Home",
+        "projects": "Projects",
+        "consulting": "Consulting",
+        "contact": "Contact",
+        "about": "About"
+    }
+}
