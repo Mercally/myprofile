@@ -1,0 +1,16 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content {
+  margin-top: 2rem;
+  text-align: left;
+}
